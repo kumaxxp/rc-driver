@@ -97,7 +97,7 @@ def main():
 
         # セグメンテーションを元画像にオーバーレイ
         debug_image = draw_debug(
-            debug_image,
+            resize_image,
             score,
             segmentation_map,
         )
@@ -105,8 +105,8 @@ def main():
         # 物体検出実行
 
         # 元画像cv_bgrをsrc_ptsを台形に切り取って、鳥観図に変換する        
-#        debug_image = BirdsEyeViewTransfer(debug_image, True)
-        debug_image = BirdsEyeViewTransfer(debug_image, True, ratio_div_h=6/8, ratio_dst_w=0.20)
+        debug_image = BirdsEyeViewTransfer(debug_image, True)
+#        debug_image = BirdsEyeViewTransfer(debug_image, True, ratio_div_h=6/8, ratio_dst_w=0.20)
 
         # セグメンテーションに要した時間をオーバーレイ
         cv.putText(debug_image,
