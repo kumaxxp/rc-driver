@@ -1,5 +1,5 @@
 # rc-driver
-ラジコンを自動運転する自動運転。
+ラジコンを自動運転するための、推論を取り扱う練習。
 使い方などのメモはこちらのリンク参照。
 
 https://qiita.com/t_kumazawa/private/7e735588dbf7d9c2bd24
