@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import copy
+from glob import escape
 import time
 import argparse
 
@@ -87,8 +88,10 @@ if __name__ == '__main__':
             break
 
         image = copy.deepcopy(frame)
+        resize_image = cv.resize(frame,dsize=(320,240))
 
-        depth_image, elapsed_time = rc_depth.loop(image)
+        depth_image, elapsed_time = rc_depth.loop(resize_image)
+        print(elapsed_time)
 
         cv.imshow('road-segmentation-adas-0001 Demo', depth_image)
         
